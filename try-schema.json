@@ -1,0 +1,39 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "/try-schema.json",
+    "title": "Tryin' on JSON Schema Spec",
+    "type": "object",
+    "properties":
+    {
+        "productId": {"type": "integer"},
+        "productName": {"type": "string"},
+        "price":
+        {
+            "type": "number",
+            "exclusiveMinimum": 0
+        },
+        "tags":
+        {
+            "type": "array",
+            "items": {"type": "string"},
+            "minItems": 1,
+            "uniqueItems": true
+        },
+        "dimensions":
+        {
+            "type": "object",
+            "properties":
+            {
+                "length": {"type": "number"},
+                "width": {"type": "number"},
+                "height": {"type": "number"}
+            },
+            "required": ["length", "width", "height"]
+        },
+        "warehouseLocation":
+        {
+            "$ref": "https://geojson.org/schema/Point.json"
+        }
+    },
+    "required": ["productID", "productName", "price"]
+}
