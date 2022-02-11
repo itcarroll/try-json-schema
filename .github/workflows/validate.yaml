@@ -1,0 +1,9 @@
+name: validate-with-json-schema
+on: [push]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: npm install -g ajv-cli
+    - run: ajv -s try-schema -d products/*
