@@ -6,4 +6,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: npm install -g ajv-cli
-    - run: ajv -s try-schema -d products/*
+    - run: ajv -s try-schema -r "https://geojson.org/schema/Point.json" -d "products/*.json"
