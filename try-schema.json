@@ -1,5 +1,5 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema",
     "$id": "/try-schema.json",
     "title": "Tryin' on JSON Schema Spec",
     "type": "object",
@@ -29,10 +29,6 @@
                 "height": {"type": "number"}
             },
             "required": ["length", "width", "height"]
-        },
-        "warehouseLocation":
-        {
-            "$ref": "https://geojson.org/schema/Point.json"
         }
     },
     "required": ["productID", "productName", "price"]
