@@ -30,10 +30,7 @@
             },
             "required": ["length", "width", "height"]
         },
-        "warehouseLocation":
-        {
-            "$ref": "https://geojson.org/schema/Point.json"
-        }
+        "warehouseLocation": {"$ref": "/point.json"}
     },
-    "required": ["productID", "productName", "price"]
+    "required": ["productId", "productName", "price"]
 }
